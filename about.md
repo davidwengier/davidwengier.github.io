@@ -4,12 +4,8 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+### Hi!
 
-### More Information
+I'm not really good at this sort of thing. I guess I like Lego and C# and writing code and thinking about development. And my wife and kids. And dog. :dog:
 
-A place to include any other types of information that you'd like to include about yourself.
-
-### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+:flag-au:
