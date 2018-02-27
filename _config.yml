@@ -21,13 +21,13 @@ footer-links:
   email:
   facebook:
   flickr:
-  github: davidwengier/davidwengier.github.io
+  github: davidwengier
   instagram:
-  linkedin:
+  linkedin: davidwengier
   pinterest:
   rss: # just type anything here for a working RSS icon
   twitter: ch00k
-  stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
+  stackoverflow: users/489/ch00k
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
 
