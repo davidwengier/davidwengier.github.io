@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Alt.Net Talk: Benchmarking and Performance
+title: Alt.Net Talk - Benchmarking and Performance
 ---
 
 I’ve given lots of talks before, on lots of different topics over the years. From internal after lunch tech talks at work, to flying half way around the world and speaking in front of hundreds of people, and I’ve always enjoyed doing it. I have to admit though most of the time I’m talking about something that I am a Subject Matter Expert in, like this year in July when I gave a talk in Seattle about an SQL-like language that I designed and implemented. I still get a little nervous before each talk but I think that’s probably a good thing because it keeps me from getting complacent and “phoning it in”.
