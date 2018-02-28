@@ -49,9 +49,8 @@ url: http://www.wengier.com/
 # then add in the baseurl here, like this: "/repository-name"
 baseurl: ""
 
-#
-# !! You don't need to change any of the configuration flags below !!
-#
+# prevent future posts from showing
+future: false
 
 permalink: /:title/
 
