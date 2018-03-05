@@ -297,6 +297,16 @@ sup {
 
 .entry table {
   font-size: small;
+
+  th {
+    border: 2px solid #000000;
+    padding: 4px;
+  }
+
+  td {
+    border: 1px solid #000000;
+    padding: 4px;
+  }
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
