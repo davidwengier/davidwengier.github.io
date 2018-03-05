@@ -5,10 +5,12 @@ pre.highlight {
   border: 1px solid #ddd;
   margin: 20px 0 20px 0;
   overflow: auto;
+  line-height: 1em;
 }
 
 code {
   font-family:'Bitstream Vera Sans Mono','Courier', monospace;
+  font-size: small;
 }
 
 .highlight .c { color: #586E75 } /* Comment */
