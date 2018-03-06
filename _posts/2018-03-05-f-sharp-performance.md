@@ -5,7 +5,7 @@ title: Looking into F# Performance
 
 After dabbling with F# and thinking about the code conventions and style that is idiomatic in that language, or at least in a FizzBuzz sample, it occurred to me that some of the ideals of F# could be seen as a potential code smell in C#.
 
-Remebering this rather elegant looking snippet of F# from the previous post:
+Remembering this rather elegant looking snippet of F# from the previous post:
 
 ```fsharp
 let fizzBuzzChecks n =
@@ -15,7 +15,7 @@ let fizzBuzzChecks n =
     |> Option.defaultValue (string n)
 ```
 
-This pipelining of functions, and calling a function that has two parameters but only passing in one, is the type of F# I'm used to seeing in examples and has some very appealing qualities in terms of readability and maintainability, but something that always niggled at the back of my mind was "what about performance?". Being a C# dev I thought of how partial applcation would be implemented in that language, and immediately the thought of lambdas and Funcs come to mind, perhaps something like this:
+This pipelining of functions, and calling a function that has two parameters but only passing in one, is the type of F# I'm used to seeing in examples and has some very appealing qualities in terms of readability and maintainability, but something that always niggled at the back of my mind was "what about performance?". Being a C# dev I thought of how partial application would be implemented in that language, and immediately the thought of lambdas and Funcs come to mind, perhaps something like this:
 
 ```csharp
 Func<int, Option<string>> fizzPartial(Option<string> result) => x => @is(3, "fizz", x, result);
@@ -72,7 +72,7 @@ Ignoring the slight differences in naming and the underscores there are two thin
 
 ## I'm very new at this
 
-Clearly after seeing this code we wouldn't expect to see major differences between the F# and C# since they are so similar. In fact further this reveals the harsh truth of my lack-of-F# skills: I didn't use any partial application after all! Partial application would have resulted in the creation of new functions with less arguments, but their simply aren't any. What I thought was partial application must have been merely the automatic passing of arguments through pipelines.
+Clearly after seeing this code we wouldn't expect to see major differences between the F# and C# since they are so similar. In fact further this reveals the harsh truth of my lack-of-F# skills: I didn't use any partial application after all! Partial application would have resulted in the creation of new functions with less arguments, but there simply aren't any. What I thought was partial application must have been merely the automatic passing of arguments through pipelines.
 
 A helpful comment from [Chris Carr](https://gist.github.com/davidwengier/bc95d4b0b52042ed5d54326d7810b30b#gistcomment-2364907) set me straight though; I just had to drop the parameters from the `fizz` and `buzz` definitions.
 
@@ -100,4 +100,4 @@ With the partial application in place we can see that the F# code is quite a bit
 
 So in summary it turns out that I still have a long way to go to understanding F#, but also that my gut reaction of "that must be using lambdas so it must be slow" is essentally correct.
 
-No in the real world this level of "slow" is unlikely to be felt but at least this exercise hsa confirmed for me that whatever the reasons for using F# are, performance is not necessarily one of them, at least not without the usual standard of effort that would be required in other languages.
+Now in the real world this level of "slow" is unlikely to be felt but at least this exercise has confirmed for me that whatever the reasons for using F# are, performance is not necessarily one of them, at least not without the usual standard of effort that would be required in other languages.
