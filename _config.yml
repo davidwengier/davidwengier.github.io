@@ -49,8 +49,8 @@ url: http://www.wengier.com/
 # then add in the baseurl here, like this: "/repository-name"
 baseurl: ""
 
-# prevent future posts from showing
-future: false
+# allow future post to appear, which fixes date issues
+future: true
 
 permalink: /:title/
 
