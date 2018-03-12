@@ -1,12 +1,11 @@
 ---
 layout: post
 title: ! ' PowerPoint Karaoke :microphone: '
-published: false
 ---
 
-*Disclaimer:* This blog is just my thoughts and opinions, I don't claim to be good at PowerPoint Karaoke, or indeed anything else I blog about.
+I've done PowerPoint Karaoke (PPTK) twice now, and seen it done a bunch of times, and while I certainly enjoy the challenge a lot of people struggle with it and find it unbearable. In this post I thought I'd have a go at writing down what I think should be done to ensure you deliver a good PPTK talk. I must admit though at my last PPTK talk I naturally failed to implement all of these ideas, because nerves, but nobody can expect to be perfect the first time. Or second., Or third.
 
-I've done PowerPoint Karaoke (I'm just gonna say PPTK from here on out) twice now, and seen it done another two times, and our after lunch "brown bag" talks and whilst I've always enjoyed it and managed to get good reactions from people, a lot of others struggle with it and find it unbearable so I thought I'd jot down a few thoughts.
+*Disclaimer:* This blog is just my thoughts and opinions, I don't claim to be good at PowerPoint Karaoke, or indeed anything else I blog about, or do in life.
 
 ## Preparation
 
