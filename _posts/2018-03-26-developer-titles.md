@@ -20,7 +20,7 @@ So how then do we talk about developer success? I would like to see us move away
 
 So what then about the others? The people who strive only for purity of code and are happiest when someone else is making the decisions? I've always liked the term "Coder" for that, as it sends a clear message about the priorities of the person. Are we talking about the code? If not, then not interested. The coders are building the lego pieces, and even putting them together to form the final outcome, but they're following the instruction booklet. They aren't interested in questioning if the outcome will fit the need, or even be useful, pretty or performant. They simply follow the objective thinking that is inherent in the job, and leave the rest to others.
 
-## Pick you poison
+## Pick your poison
 
 So which one am I? Which one are you? I think one of the benefits of using different terms is that I can be both. I'm a Senior Developer in terms of approach and thinking, and where I am now I'm also a Senior Coder, because I know the codebase very well and can get things done very quickly and efficiently. In my new role I might start out as a Junior Coder though, still applying the Senior Developer thinking where appropriate, but learning a new codebase and perhaps even making some "rookie" mistakes like coding standards violations etc.
 
