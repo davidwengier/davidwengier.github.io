@@ -1,7 +1,6 @@
 ---
 layout: post
 title: DDD By Night March 2018
-published: false
 ---
 
 I was lucky enough to have my submission accepted to speak at [DDD By Night](https://www.meetup.com/DDD-Melbourne-By-Night/events/247272367/) on Thursday the 15th of March, 2018. DDD By Night is put on by the organisers of [DDD Melbourne](https://www.dddmelbourne.com) and usually happens twice a year, consisting of 8 lightening talks of 10 minutes each.
