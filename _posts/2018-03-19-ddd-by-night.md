@@ -24,3 +24,7 @@ In the end my talk contained 6 minutes of information about how skills work, and
 I rehearsed about 6 times so I was sure of my timing, and the talk went well, was well received, and multiple people told me they might have a go at writing an Alexa skill. Can't ask for more than that really.
 
 ***So go and write an Alexa skill!***
+
+## Update: 10 Minutes might just be long enough
+
+Maybe, just maybe, a 10 minute talk can actually convey enough information [to be useful](https://twitter.com/centur/status/976368531309699072). Slides from the talk are available here: [https://www.slideshare.net/DavidWengier/introduction-to-amazon-echo-skills](https://www.slideshare.net/DavidWengier/introduction-to-amazon-echo-skills)
