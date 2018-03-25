@@ -3,8 +3,6 @@ layout: post
 title: Developer vs Coder
 ---
 
-## Señor Developer
-
 There are many ways to describe the difference between two types of developers: Junior vs Senior Developers, New vs Experienced Developers, Good vs Bad Developers. I've never been comfortable with any of these because its always too easy to find exceptions that prove the rule. I've worked with junior developers who really understand what it takes to be a successful well rounded programmer, and with senior developers who have years of experience yet lack a few important skills to really allow them to be successful.
 
 ## Naming is hard
