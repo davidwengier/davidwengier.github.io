@@ -1,9 +1,9 @@
 ---
 layout: post
-title: ! ' :scissors: UX Papercut: Lights! '
+title: ! ' UX Papercut :scissors:: Lights! '
 ---
 
-The headlight stalk on the 2017 Honda CR-V annoys me more than something so simply has any right to annoy anyone. On the surface it follows the well worn path of headlight stalks, and indeed wiper stalks, across the car industry that has become standard for years. You turn the end of the stalk to select what level you want the headlights to be at, you move the stalk up and down to indicate, and forward and back to use the highbeams. So far so good, all is fine.
+The headlight stalk on the 2017 Honda CR-V annoys me more than something so simple has any right to annoy anyone. On the surface it follows the well worn path of headlight stalks, and indeed wiper stalks, across the car industry that has become standard for years. You turn the end of the stalk to select what level you want the headlights to be at, you move the stalk up and down to indicate, and forward and back to use the highbeams. So far so good, all is fine.
 
 The issue I have is with the shape of the stalk which has a very pleasing rounded triangle cross section. Upon first viewing this design is very nice, it allows for slightly easier reading of the words and symbols on the stalk, and it feels nice in the hand to use. I'm sure the person who designed it has a picture of it on their wall and I'm sure they're happy with their work.
 
