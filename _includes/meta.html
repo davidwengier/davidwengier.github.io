@@ -19,13 +19,11 @@
 {% if page.title %}
 <meta name="og:title" content="{{ page.title }}" />
 <meta name="twitter:title" content="{{ page.title }}" />
-<meta name="twitter:title" content="{{ page.title }}">
+<meta name="twitter:text:title" content="{{ page.title }}">
 {% else %}
-<meta name="og:title" content="{{ site.title }}" />
-<meta name="twitter:title" content="{{ site.title }}" />
-<meta name="twitter:title" content="{{ site.title }}">
-<meta name="twitter:text:title" content="{{ site.title }}" />
-<meta name="twitter:text:title" content="{{ site.title }}">
+<meta name="og:title" content="David Wengier" />
+<meta name="twitter:title" content="David Wengier" />
+<meta name="twitter:text:title" content="David Wengier">
 {% endif %}
 {% if page.title %}
   <meta content="article" name="og:type">
