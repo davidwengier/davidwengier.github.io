@@ -34,11 +34,11 @@
 <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
 {% endif %}
 {% if page.image %}
-<meta name="twitter:image:src" content="{{ site.url }}/images/{{ page.image }}">
-<meta content="{{ site.url }}/images/{{ page.image }}" name="og:image">
+<meta name="twitter:image" content="{{ site.url }}/images/{{ page.image }}">
+<meta name="og:image" content="{{ site.url }}/images/{{ page.image }}">
 {% else %}
-<meta name="twitter:image:src" content="{{ site.url }}/images/profile.png">
-<meta content="{{ site.url }}/images/profile.png" name="og:image">
+<meta name="twitter:image" content="{{ site.url }}/images/profile.png">
+<meta name="og:image" content="{{ site.url }}/images/profile.png">
 {% endif %}
 {% if page.date %}
   <meta content="{{ page.date | date_to_xmlschema }}" name="article:published_time">
