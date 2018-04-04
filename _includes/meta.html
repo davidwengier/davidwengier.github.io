@@ -7,39 +7,42 @@
 
 {% if page.excerpt %}
 <meta name="description" content="{{ page.excerpt| strip_html }}" />
-<meta property="og:description" content="{{ page.excerpt| strip_html }}" />
-<meta property="twitter:description" content="{{ page.excerpt| strip_html }}" />
+<meta name="og:description" content="{{ page.excerpt| strip_html }}" />
+<meta name="twitter:description" content="{{ page.excerpt| strip_html }}" />
 {% else %}
 <meta name="description" content="{{ site.description }}">
-<meta property="og:description" content="{{ site.description }}" />
+<meta name="og:description" content="{{ site.description }}" />
 <meta name="twitter:description" content="{{ site.description }}">
 {% endif %}
 <meta name="author" content="{{ site.name }}" />
 
 {% if page.title %}
-<meta property="og:title" content="{{ page.title }}" />
-<meta property="twitter:title" content="{{ page.title }}" />
+<meta name="og:title" content="{{ page.title }}" />
+<meta name="twitter:title" content="{{ page.title }}" />
 <meta name="twitter:title" content="{{ page.title }}">
 {% else %}
-<meta property="og:title" content="{{ site.title }}" />
-<meta property="twitter:title" content="{{ site.title }}" />
+<meta name="og:title" content="{{ site.title }}" />
+<meta name="twitter:title" content="{{ site.title }}" />
 <meta name="twitter:title" content="{{ site.title }}">
+<meta name="twitter:text:title" content="{{ site.title }}" />
+<meta name="twitter:text:title" content="{{ site.title }}">
 {% endif %}
 {% if page.title %}
-  <meta content="article" property="og:type">
+  <meta content="article" name="og:type">
 {% else %}
-  <meta content="website" property="og:type">
+  <meta content="website" name="og:type">
 {% endif %}
 {% if page.url %}
 <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
 {% endif %}
 {% if page.image %}
 <meta name="twitter:image:src" content="{{ site.url }}/images/{{ page.image }}">
+<meta content="{{ site.url }}/images/{{ page.image }}" name="og:image">
 {% else %}
 <meta name="twitter:image:src" content="{{ site.url }}/images/profile.png">
-<meta content="{{ site.url }}/images/profile.png" property="og:image">
+<meta content="{{ site.url }}/images/profile.png" name="og:image">
 {% endif %}
 {% if page.date %}
-  <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
-  <meta content="{{ site.url }}/about/" property="article:author">
+  <meta content="{{ page.date | date_to_xmlschema }}" name="article:published_time">
+  <meta content="{{ site.url }}/about/" name="article:author">
 {% endif %}
