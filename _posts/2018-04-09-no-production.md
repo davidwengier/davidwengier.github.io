@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ! I don't want to remote into production
-published: false
+published: true
 ---
 
 A friend of mine tweeted this article, and excellent summary today, about a recent production outage at Travis CI:
