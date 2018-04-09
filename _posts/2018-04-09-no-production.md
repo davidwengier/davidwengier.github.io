@@ -31,6 +31,8 @@ The ideal situation for production environments (or indeed most other environmen
 
 If the only possible path is automated tooling then by the time a deployment to production is done not only are you guaranteed that the tooling is in place, you've also ideally tested its execution a few times in various environments.
 
+Its always tempting for developers to leave this sort of effort to the end, but that sort of thinking is what leads to manual processes lasting years as workarounds because other work is higher priority. On the other hand if a developer has no option to solve their annoyance than to do the work right the first time, rest assured they will do that.
+
 ## Data is cheating too
 
 If you want to take this to the logical extreme, which I do, I also don't want to modify any data in the database directly. If I'm building out a new feature that requires data in a specific shape, either to run or simply for me to manually test with, then I would rather build the seeding scripts, or ideally the data management front end, first. The seeding scripts can help with functional/integration tests, or the data management work presumably solves some future need in the product (and if thats not the case then don't do it! But also consider why that data is needed).
