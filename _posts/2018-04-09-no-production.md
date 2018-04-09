@@ -25,9 +25,9 @@ Yes, I can work through checklists with well documented steps.
 
 Or I can just make incorrect actions impossible. If I can't remote to a server, I can't be remoted to the wrong server. If I can't connect to a database, I can't forget part of a script or statement. 
 
-## IF you want something fixed, make it a problem
+## If you want something fixed, make it a problem
 
-The ideal situation for production environments (or indeed most other environments) is that their setup and configuration is completely automated and needs no manual work. By making manual work impossible you force people and teams to do the necessary work to create tooling to enable that. There can be no shortcuts taken and temptation is removed by virtue of a firm wall between developers and where their code is deployed. If I need to make a change to a database schema I want the only option to be to create a change script, or similar. I would apply that script to my dev environment and in time to  testing and staging environments.
+The ideal situation for production environments (or indeed most other environments) is that their setup and configuration is completely automated and needs no manual work. By making manual work impossible you force people and teams to do the necessary work to create tooling to enable that. There can be no shortcuts taken and temptation is removed by virtue of a firm wall between developers and where their code is deployed. If I need to make a change to a database schema I want the only option to be to create a change script, or similar. I would apply that script to my dev environment and in time to testing and staging environments.
 
 If the only possible path is automated tooling then by the time a deployment to production is done not only are you guaranteed that the tooling is in place, you've also ideally tested its execution a few times in various environments.
 
