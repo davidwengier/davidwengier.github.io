@@ -7,6 +7,12 @@ layout: default
 
   <div class="entry">
     {{ content }}
+
+    <p>
+      Share this post on
+      <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>,
+      <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>.
+    </p>
   </div>
 
   <div class="date">

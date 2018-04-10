@@ -19,7 +19,7 @@ html {
 
 body {
 	background: $white;
-  font: 18px/1.4 $helvetica;
+  font: 15px/1.3 $helvetica;
   color: $darkGray;
 }
 
@@ -117,7 +117,12 @@ img {
 
 .date {
   font-style: italic;
+  font-size: small;
   color: $gray;
+}
+
+.links {
+  
 }
 
 // Specify the color of the selection
