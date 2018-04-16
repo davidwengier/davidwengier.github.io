@@ -23,7 +23,7 @@ The basic idea is that you use that folder for SQL scripts that contain a simple
 
 The existing DbUp script runner looks fairly basic, like this:
 
-```C#
+```csharp
 var upgrader = DeployChanges.To
                .SqlDatabase(connectionString)
                .WithScriptsEmbeddedInAssembly(Assembly.GetExecutingAssembly())
@@ -35,7 +35,7 @@ var upgrader = DeployChanges.To
 
 We need to add a new upgrader to this script and instead of storing the journal in a table we will use the `NullJournal` that is build into DbUp
 
-```C#
+```csharp
 var storedProcUpgrader = DeployChanges.To
                .SqlDatabase(connectionString)
                .WithScriptsEmbeddedInAssembly(Assembly.GetExecutingAssembly())
@@ -47,7 +47,7 @@ var storedProcUpgrader = DeployChanges.To
 
 The last piece of the puzzle is to put a filter onto each upgrader so each one only loads the scripts we want. The final code looks like this:
 
-```C#
+```csharp
 public static int Main()
 {
     var connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
