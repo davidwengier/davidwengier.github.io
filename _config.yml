@@ -18,14 +18,14 @@ avatar: /images/profile.jpg
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email:
+  email: blog@wengier.com
   facebook:
   flickr:
   github: davidwengier
   instagram:
   linkedin: davidwengier
   pinterest:
-  rss: # just type anything here for a working RSS icon
+  rss: rss # just type anything here for a working RSS icon
   twitter: davidwengier
   stackoverflow: users/489
   youtube: # channel/<your_long_string> or user/<user-name>
@@ -84,3 +84,4 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+  - .vscode
