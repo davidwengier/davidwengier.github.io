@@ -21,7 +21,7 @@ dotnet_naming_rule.public_members_must_be_pascal.symbols = public_symbols
 dotnet_naming_rule.public_members_must_be_pascal.style = pascal_style
 ```
 
-In this example `dotnet_name_rule` denotes that we're defining part of a rule, `public_members_must_be_pascal` is the name of our rule, and we're going to apply it to symbols that match the `public_symbols` naming symbols which we'll define later. We want this rule to be enforced at all times so the `severity` is `error`, which means Visual Studio will treat violations the same as it treats compiler errors. Lastly we've said that things that match this rule should use the style defined in `pascal_style` which is the name we will give to our style.
+In this example `dotnet_naming_rule` denotes that we're defining part of a rule, `public_members_must_be_pascal` is the name of our rule, and we're going to apply it to symbols that match the `public_symbols` naming symbols which we'll define later. We want this rule to be enforced at all times so the `severity` is `error`, which means Visual Studio will treat violations the same as it treats compiler errors. Lastly we've said that things that match this rule should use the style defined in `pascal_style` which is the name we will give to our style.
 
 ## Naming Styles
 
