@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ! Multi targeting builds in one solution
+title: ! Targeting builds for multiple frameworks and machines
 published: false
 ---
 
@@ -57,10 +57,16 @@ Since we're now telling MSBuild to _exclude_ items we don't want, we flip the co
 If the conditions so far have been based on the frameworks being targeted, then how do you make the targets conditional? To do that you need something at a higher level and fortunately the operating system fills this role perfectly. We can tell MSBuild to build .NET Core and .NET Framework on Windows, just .NET Core on a Mac, and everything will flow correctly from there based on whichever target is being built at the time. The conditions look very similar too.
 
 ```
-  <TargetFrameworks Condition="'$(OS)' != 'Unix'">net46;netcoreapp2.0</TargetFrameworks>
   <TargetFrameworks>netcoreapp2.0</TargetFrameworks>
+  <TargetFrameworks Condition="'$(OS)' != 'Unix'">net46;netcoreapp2.0</TargetFrameworks>
 ```
 
-Two things to note here: The first thing obviously is that the OS for Mac is "Unix". This surprised me, but is not a big deal. I guessed originally that it would be "Mac" and when that didn't work I simply added a `<Message Text="$(OS)" />` to my project file and observed what the output was.
+Two things to note here: The first thing is that the OS for Mac is "Unix". This surprised me, but is not a big deal. I guessed originally that it would be "Mac" and when that didn't work I simply added a build task to my project file and observed what the output was. The task is as follows, and its run by specifying 'InitialTargets="LogDebugInfo"`, but its a good reminder again that these csproj files are also simply MSBuild scripts and can be treated as such - though double check Visual Studio is still happe afterwards.
 
-Secondly you'll notice that there is only a condition on one of the elements. This was not what I tried first, and whilst having conditions on both worked fine in the `dotnet build` world (on Mac and Windows) Visual Studio itself got very confused. I posted about it on Twitter and the very helpful [David Kean](https://twitter.com/davkean) who works for Microsoft on the new project system [pointed](https://twitter.com/davkean/status/987820416579223552) me to [this GitHub issue](https://github.com/dotnet/project-system/issues/1829) explaining that I'd hid a bug. It wasn't a big deal to remove one condition 
+```
+  <Target Name="LogDebugInfo">
+    <Message Text="Building for $(TargetFramework) on $(OS)" Importance="High" />
+  </Target>
+```
+
+Secondly you'll notice that there is only a condition on one of the elements. This was not what I tried first, as I assumed that there would be problems having duplicated elements without conditions to differentiate them. Indeed whilst having conditions on both worked fine in the `dotnet build` world (on Mac and Windows) Visual Studio itself got very confused. I posted about it on Twitter and the very helpful [David Kean](https://twitter.com/davkean) who works for Microsoft on the new project system [pointed](https://twitter.com/davkean/status/987820416579223552) me to [this GitHub issue](https://github.com/dotnet/project-system/issues/1829) explaining that I'd hid a bug. It wasn't a big deal to remove one condition I just had to make sure the order was right. Having two `<TargetFrameworks>` elements means the second one overrides the first, so in order for Windows to still get net46 support it had to come last. It looks like as long as the project file has one element without a condition Visual Studio (at least v15.6.7 that I'm trying this on)
