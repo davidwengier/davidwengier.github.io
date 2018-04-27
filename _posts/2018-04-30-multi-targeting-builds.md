@@ -61,7 +61,7 @@ If the conditions so far have been based on the frameworks being targeted, then 
   <TargetFrameworks Condition="'$(OS)' != 'Unix'">net46;netcoreapp2.0</TargetFrameworks>
 ```
 
-Two things to note here: The first thing is that the OS for Mac is "Unix". This surprised me, but is not a big deal. I guessed originally that it would be "Mac" and when that didn't work I simply added a build task to my project file and observed what the output was. The task is as follows, and its run by specifying 'InitialTargets="LogDebugInfo"`, but its a good reminder again that these csproj files are also simply MSBuild scripts and can be treated as such - though double check Visual Studio is still happe afterwards.
+Two things to note here: The first thing is that the OS for Mac is "Unix". This surprised me, but is not a big deal. I guessed originally that it would be "Mac" and when that didn't work I simply added a build task to my project file and observed what the output was. The task is as follows, and its run by specifying 'InitialTargets="LogDebugInfo"`, but its a good reminder again that these csproj files are also simply MSBuild scripts and can be treated as such - though double check Visual Studio is still happen afterwards.
 
 ```
   <Target Name="LogDebugInfo">
