@@ -19,7 +19,7 @@ This may seem easy but its slightly complicated by the fact that I want to suppo
 
 The easiest way to think about multi-targeting in the new project system is to remember this simple fact: Each target framework acts like its a duplicate of the whole project. Consider a .csproj file with the following declaration.
 
-```
+```xml
 <TargetFrameworks>net46;netcoreapp2.0</TargetFrameworks>
 ```
 
@@ -29,10 +29,10 @@ In my case I want the Sqlite code to only be built for netcoreapp2.0 because it 
 
 Armed with this information we know that we need to exclude the Sqlite dependencies and files when building for net46 and this is done with a `Condition` attribute on the relevant spots in the project file.
 
-```
-  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.0'">
-    <ProjectReference Include="..\..\src\DbUpgrader.Sqlite\DbUpgrader.Sqlite.csproj" />
-  </ItemGroup>
+```xml
+<ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.0'">
+  <ProjectReference Include="..\..\src\DbUpgrader.Sqlite\DbUpgrader.Sqlite.csproj" />
+</ItemGroup>
 ```
 
 Here I am instructing the project system to only reference the Sqlite project if the target framework of the build is netcoreapp2.0. This is where thinking about the targets as separate builds makes sense. When its passing through this file building for net46 MSBuild will see that the condition is not met, and simply skip over this part of the file. No reference will be added. When building for netcoreapp2.0 the reference will be added.
@@ -43,10 +43,10 @@ Thats all well and good for the reference but obviously if the reference is ther
 
 You can use an `exclude` attribute on a `<Compile>` element alongside the normal `include` but I found the usage of that a bit ugly, and since by default there isn't any `<Compile>` elements needed in the Sdk projects it seemed a bit clunky to add one back in. The solution I settled on was to simply update the `DefaultItemExcludes` property that already exists, and is already used by the default project. The glob support in the new system makes this a breeze too, needing only a single addition to exclude multiple files and folders/subfolders.
 
-```
-  <PropertyGroup Condition="'$(TargetFramework)' == 'net46'">
-    <DefaultItemExcludes>$(DefaultItemExcludes);Integration\Sqlite\**\*</DefaultItemExcludes>
-  </PropertyGroup>
+```xml
+<PropertyGroup Condition="'$(TargetFramework)' == 'net46'">
+  <DefaultItemExcludes>$(DefaultItemExcludes);Integration\Sqlite\**\*</DefaultItemExcludes>
+</PropertyGroup>
 ```
 
 Since we're now telling MSBuild to _exclude_ items we don't want, we flip the condition so its based on net46. These two things combined mean we get the project including everything we want when building for .NET Core, and not including the wrong things when building for .NET Framework.
@@ -55,17 +55,17 @@ Since we're now telling MSBuild to _exclude_ items we don't want, we flip the co
 
 If the conditions so far have been based on the frameworks being targeted, then how do you make the targets conditional? To do that you need something at a higher level and fortunately the operating system fills this role perfectly. We can tell MSBuild to build .NET Core and .NET Framework on Windows, just .NET Core on a Mac, and everything will flow correctly from there based on whichever target is being built at the time. The conditions look very similar too.
 
-```
-  <TargetFrameworks>netcoreapp2.0</TargetFrameworks>
-  <TargetFrameworks Condition="'$(OS)' != 'Unix'">net46;netcoreapp2.0</TargetFrameworks>
+```xml
+<TargetFrameworks>netcoreapp2.0</TargetFrameworks>
+<TargetFrameworks Condition="'$(OS)' != 'Unix'">net46;netcoreapp2.0</TargetFrameworks>
 ```
 
 Two things to note here: The first thing is that the OS for Mac is "Unix". This surprised me, but is not a big deal. I guessed originally that it would be "Mac" and when that didn't work I simply added a build task to my project file and observed what the output was. The task is as follows, and its run by specifying `InitialTargets="LogDebugInfo"` in the `<Project>` node, but its a good reminder again that these csproj files are also simply MSBuild scripts and can be treated as such - though double check Visual Studio is still happy afterwards.
 
-```
-  <Target Name="LogDebugInfo">
-    <Message Text="Building for $(TargetFramework) on $(OS)" Importance="High" />
-  </Target>
+```xml
+<Target Name="LogDebugInfo">
+  <Message Text="Building for $(TargetFramework) on $(OS)" Importance="High" />
+</Target>
 ```
 
 Secondly you'll notice that there is only a condition on one of the elements. This was not what I tried first, as I assumed that there would be problems having duplicated elements without conditions to differentiate them. Indeed whilst having conditions on both worked fine in the `dotnet build` world (on Mac and Windows) Visual Studio itself got very confused. I posted about it on Twitter and the very helpful [David Kean](https://twitter.com/davkean) who works for Microsoft on the new project system [pointed](https://twitter.com/davkean/status/987820416579223552) me to [this GitHub issue](https://github.com/dotnet/project-system/issues/1829) explaining that I'd hit a bug. It wasn't a big deal to remove one condition I just had to make sure the order was right. Having two `<TargetFrameworks>` elements means the second one overrides the first, so in order for Windows to still get net46 support it had to come last.
