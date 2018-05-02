@@ -3,7 +3,7 @@ layout: post
 title: ! Targeting builds for multiple frameworks and machines
 ---
 
-I've recently starting working on a new project in my spare time, [DbUpgrader](http://github.com/davidwengier/dbupgrader), and I'm trying to work on it for at least a few minutes every night. I variously use a MacBook Pro or Windows machine, and sometimes I use Visual Studio 2017 but sometimes I'm just using Visual Studio Code and mucking around on the console. I'd like to also try out Visual Studio for Mac sometime soon. All of these different environments have their advantages and features, but I mostly want to make sure that I can work in all of them, on the same project, without issue.
+I've recently starting working on a new project in my spare time, [DbUpgrader](https://github.com/davidwengier/dbupgrader), and I'm trying to work on it for at least a few minutes every night. I variously use a MacBook Pro or Windows machine, and sometimes I use Visual Studio 2017 but sometimes I'm just using Visual Studio Code and mucking around on the console. I'd like to also try out Visual Studio for Mac sometime soon. All of these different environments have their advantages and features, but I mostly want to make sure that I can work in all of them, on the same project, without issue.
 
 Enter the [new project system](https://github.com/dotnet/project-system) in Visual Studio which allows for minimal .csproj files that remain easily editable MSBuild targets without having to compromise and have separate build scripts for each scenario. The challenge I set myself was to see if I could create a single solution with projects that fulfilled the following needs:
 
