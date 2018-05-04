@@ -38,6 +38,31 @@ My script is overly long because of the debugging output but I find build logs v
 Write-Host "##teamcity[buildNumber '1.0.%build.counter%-$("%build.vcs.number%".substring(0, 10))']"
 ```
 
-I'm keeping the short has at 10 characters for no good reason, you could easily change that to whatever you desire. Its worth noting that with this as the first step of the build plan the "Build number format" setting has been rendered effectively useless for all but the first few seconds of the build, until it runs this script.
+I'm keeping the short has at 10 characters for no good reason, you could easily change that to whatever you desire. Its worth noting that with this as the first step of the build plan the "Build number format" setting has been rendered effectively useless for all but the first few seconds of the build, until it runs this script. With the script in blame the build number will now be `1.0.134-770ac6d169`.
 
-## 
+## Pass hashes through to Octopus
+
+Now that we have our short build number its important to use that in the version number for any package pushed to Octopus, and the release made from those packages. This gives full traceability from git commit, to build, through to deployment. If you also use something like [NerdBank.GitVersioning](https://github.com/AArnott/Nerdbank.GitVersioning) you can tag your DLLs with the same commit hash, which means you can also include it in your application logs or audit tracking.
+
+With the version number in the package being deployed in Octopus it means we can now create a powershell script, and put it in the process for a production deployment. That script  fast forward the master branch to the specific commit that has been deployed, guaranteeing that the master branch will point at exactly where the develop branch was at when that package was built.
+
+```powershell
+$hash = "$($OctopusParameters["Octopus.Release.Number"])".Split("-")[1]
+
+Write-Host "Fetching latest origin just to be sure"
+git fetch origin
+Write-Host "Resetting to current master"
+git reset origin/master --hard
+Write-Host "Fast forwarding to $hash"
+git merge $hash --ff-only
+Write-Host "Pushing back to origin"
+git push origin
+```
+
+The script needs to be run in a git working copy and assumes master is checked out, though that could be added easily enough. I could have reset to the specific commit and just pushed that, but I like the extra protection that `--ff-only` provides. It ensures that if anything goes wrong with the working copy, or the script gets run at an incorrect time, there at least won't be any commits lost that will require navigating the reflog for. There might be a better way to achieve this, or perhaps that worry is for nothing, but I don't profess to be a git expert.
+
+## Hotfixes are now just another build
+
+Now that master is at the point of the deployed production build, hotfix branches can be created from, and merged back into, the master branch, which can then be built and deployed with the normal build and deployment process knowing that any changes that have been made to the develop branch will not be included. In an ideal world develop remains deployable and this process isn't needed, but an insurance policy is a good idea and in this case, cheap to have.
+
+In my case I've set up a separate build on TeamCity for the master branch that is not automatically triggered, and considering each production deploy will change the master branch thats advisable. Additionally this build releases on a hotfix channel in Octopus so that it can deploy direct to staging, avoiding test. This way test still maps to the develop branch so that process isn't interrupted. 
