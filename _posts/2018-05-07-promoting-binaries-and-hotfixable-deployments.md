@@ -1,7 +1,7 @@
 ---
 layout: post
-title: ! Promoting Binaries and Hotfixable Deployments
-published: false
+title: Promoting Binaries and Hotfixable Deployments
+published: true
 ---
 
 There are a two different schools of thought when it comes to deploying to production environments. Well okay, we're developers, so there are probably 100 different schools of thought but bear with me. One option is to promote the same binaries from testing, through staging, and all the way to production, and the other is to maintain a branch in your source repository for the current state of production, and deploy from that. The general thinking is that with the former you get safety in knowing that your production deployments is _exactly_ what has been through your testing cycles, and with the latter you're always in a position to hotfix and correct a production issue regardless of what state your testing branch might be in.
@@ -44,25 +44,48 @@ I'm keeping the short has at 10 characters for no good reason, you could easily 
 
 Now that we have our short build number its important to use that in the version number for any package pushed to Octopus, and the release made from those packages. This gives full traceability from git commit, to build, through to deployment. If you also use something like [NerdBank.GitVersioning](https://github.com/AArnott/Nerdbank.GitVersioning) you can tag your DLLs with the same commit hash, which means you can also include it in your application logs or audit tracking.
 
-With the version number in the package being deployed in Octopus it means we can now create a powershell script, and put it in the process for a production deployment. That script  fast forward the master branch to the specific commit that has been deployed, guaranteeing that the master branch will point at exactly where the develop branch was at when that package was built.
+With the version number in the package being deployed in Octopus it means we can now create a powershell script, and put it in the process for a production deployment. That script fast forwards the master branch to the specific commit that has been deployed, guaranteeing that the master branch will point at exactly where the develop branch was at when that package was built.
+
+<img src="../images/posts/fast-forward-to-master-step.png" alt="Fast Forward to Master Step" />
 
 ```powershell
-$hash = "$($OctopusParameters["Octopus.Release.Number"])".Split("-")[1]
+Set-Location -Path "<path to source repository>"
+$vers = "$($OctopusParameters["Octopus.Release.Number"])".Split("-")[1]
+Write-Host "Version is: $vers"
+$commitHash = $vers.Substring($vers.IndexOf("-") + 1)
+Write-Host "This release is from commit hash: $commitHash" 
 
 Write-Host "Fetching latest origin just to be sure"
-git fetch origin
+git fetch origin --prune
 Write-Host "Resetting to current master"
 git reset origin/master --hard
 Write-Host "Fast forwarding to $hash"
 git merge $hash --ff-only
 Write-Host "Pushing back to origin"
 git push origin
+Write-Host "Finished"
 ```
 
 The script needs to be run in a git working copy and assumes master is checked out, though that could be added easily enough. I could have reset to the specific commit and just pushed that, but I like the extra protection that `--ff-only` provides. It ensures that if anything goes wrong with the working copy, or the script gets run at an incorrect time, there at least won't be any commits lost that will require navigating the reflog for. There might be a better way to achieve this, or perhaps that worry is for nothing, but I don't profess to be a git expert.
 
 ## Hotfixes are now just another build
 
-Now that master is at the point of the deployed production build, hotfix branches can be created from, and merged back into, the master branch, which can then be built and deployed with the normal build and deployment process knowing that any changes that have been made to the develop branch will not be included. In an ideal world develop remains deployable and this process isn't needed, but an insurance policy is a good idea and in this case, cheap to have.
+Now that master is at the point of the deployed production build, hotfix branches can be created from, and merged back into, the master branch, which can then be built and deployed with the normal build and deployment process knowing that any changes that have been made to the develop branch will not be included. In an ideal world develop remains deployable and this process isn't needed, but an insurance policy is a good idea and in this case, cheap to have. In my case I've set up a separate build on TeamCity for the master branch that is not automatically triggered, and considering each production deploy will change the master branch thats best.
 
-In my case I've set up a separate build on TeamCity for the master branch that is not automatically triggered, and considering each production deploy will change the master branch thats advisable. Additionally this build releases on a hotfix channel in Octopus so that it can deploy direct to staging, avoiding test. This way test still maps to the develop branch so that process isn't interrupted. 
+<img src="../images/posts/hotfix-lifecycle.png" alt="HotFix Lifecycle" />
+
+The hotfix build releases on a hotfix channel in Octopus so that it can deploy direct to staging, avoiding test. This way test still maps to the develop branch so that process isn't interrupted. Specifying the channel to use is a matter of setting the right parameters in the TeamCity build step that does your Octopus release creation.
+
+<img src="../images/posts/push-to-octopus.png" alt="Specify Channel in Octopus" />
+
+The only issue that I ran into with this is that because I'm not using a "smart" build number, but instead just a numerically increasing build counter, the first hotfix build didn't actually get deployed by Octopus. Looking at the TeamCity and Octopus logs it was clear that while the build and release versions were correct, when it came time to pick which packages went into a release Octopus saw the hotfix build as being older than the last develop build, simply because of the build counter.
+
+To solve this I configured the Octopus release creator to force a package version to use. Since we have commit hashes at every step of the way the actual version numbers all become rather irrelevant so this feels like a perfectly safe thing to do. In theory if two releases point to the same commit hash, it doesn't matter if one is v2.0.1 and the other is v3.56.231, they have the same code and therefore will function the same way.
+
+<img src="../images/posts/push-to-octopus-advanced-options.png" alt="Advanced Octopus Options" />
+
+You might need to click "Show Advanced Options" in TeamCity to get this item to appear.
+
+## Hope for the best, plan for the worst
+
+Now we have a situation where the devlop branch is build an deployed automatically, as often as we like. We know the commit hash at every step of the way, so we can map everything back to the raw source commit and we have our insurance policy in place if things go wrong, via the master branch  moving and hotfix build available for manual triggering.
