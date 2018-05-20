@@ -16,3 +16,20 @@ The answer lies in the IIS Failed Request Tracing feature and the fact that it i
 
 ![Failed Request Tracing](../images/posts/FRT.png)
 
+The module itself has quite a nice wizard to guide you through setting up a new rule, however to debug rewrites in the way that I want to, its a little unintuitive so I'll detail exactly what I did.
+
+The first step is straight forward enough, where you select which filenames you want to trace. In the modern era of MVC and WebApi this feels a little antiquated, since file names are a bit naff, so probably best, and certainly easiest, to just leave this selection on "All content".
+
+The second screen is where the real magic happens:
+
+![Failed Request Tracing Step 2](../images/posts/frt-step-2.png)
+
+The first input option here is to specify which HTTP status codes should be traced, and this is where we flip the "failure" title on its head. By specifying a successful code here (ie, 2xx or 3xx) we get tracing for successful requests and not just failed ones.
+
+Depending on how much logging you want happening, you could narrow this down to just the statuses you want to track, for example just specify 301 to trace permanent redirects, or you could widen it. I think starting as wide as you can and specifying `200-399` for this value is the best, that way even if you're adding a new permanent redirect rule that you want to trace, you'll get the logs even if you had something wrong with your rule and the request fell through to a different rewrite rule. 
+
+If the requests you're trying to trace are getting through to your site and resulting in errors or bad URLs you also might want to add in `404` and `500` to the list.
+
+![Failed Request Tracing Step 3](../images/posts/frt-step-3.png)
+
+The 3rd screen allows for the selection of which IIS modules you want to trace so in order to keep some of the noise out of the log its best to untick everything except `Rewrite` and `RequestRouting`. Leave the verbosity at verbose, mainly because its fun to say "verbose verbosity".
