@@ -14,7 +14,7 @@ Fortunately there is a way to debug the rules, or at least get logging out of th
 
 The answer lies in the IIS Failed Request Tracing feature and the fact that it is possible to configure it to trace successful requests just as easily as failed ones. The feature can be access through the IIS manager or the configuration can be specified in the `web.config` file of your application.
 
-![Failed Request Tracing](https://wengier.com/images/posts/frt.png)
+![Failed Request Tracing](https://wengier.com/images/posts/FRT.png)
 
 The module itself has quite a nice wizard to guide you through setting up a new rule, however to debug rewrites in the way that I want to, its a little unintuitive so I'll detail exactly what I did.
 
