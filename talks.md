@@ -11,7 +11,7 @@ I also delivered the Day 2 Technical Keynote at the AACUHO conference in Hobart 
 As far as meetups and conferences go I have spoken, or will speak, at the following events:
 
 * NDC London 2019 - 28 January - 1 February 2019 - [Benchmarking and Performance](https://ndc-london.com/speaker/david-wengier/)
-* NDC Sydney 2018 - 19 - 21 September 2018 - [Benchmarking and Performance](https://ndcsydney.com/speaker/david-wengier/)
+* NDC Sydney 2018 - 19 - 21 September 2018 - [Benchmarking and Performance](https://ndcsydney.com/speaker/david-wengier/) - [Video](https://www.youtube.com/watch?v=rBwsrLFBg5Y)
 * Alt.Net Melbourne - 29th May 2018 - Overview of Span&lt;T&gt; - [Slides](https://www.slideshare.net/DavidWengier/a-brief-overview-of-spant) - [Video](https://www.youtube.com/watch?v=byvoPD15CXs)
 * DDD by Night March 2018 - 15th March 2018 - Introduction to Amazon Echo Skills - [Slides](https://www.slideshare.net/DavidWengier/introduction-to-amazon-echo-skills)
 * Alt.Net Melbourne - 29th August 2017 - Benchmarking and Performance - [Slides](https://www.slideshare.net/DavidWengier/performance-and-benchmarking-79247400) - [Code](https://github.com/davidwengier/Benchmark) - [Video](https://www.youtube.com/watch?v=S8zhGaT6vv8)
