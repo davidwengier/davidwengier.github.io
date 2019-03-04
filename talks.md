@@ -10,6 +10,7 @@ I also delivered the Day 2 Technical Keynote at the AACUHO conference in Hobart 
 
 As far as meetups and conferences go I have spoken, or will speak, at the following events:
 
+* Alt.Net Melbourne - 26th February 2019 - Contributing to Microsoft via Open Source
 * NDC London 2019 - 28 January - 1 February 2019 - [Benchmarking and Performance](https://ndc-london.com/speaker/david-wengier/) - [Slides](https://www.slideshare.net/DavidWengier/pragmatic-performance-from-ndc-london-2019) - [Video](https://www.youtube.com/watch?v=fi_nUJOyjzk)
 * NDC Sydney 2018 - 19 - 21 September 2018 - [Benchmarking and Performance](https://ndcsydney.com/speaker/david-wengier/) - [Video](https://www.youtube.com/watch?v=rBwsrLFBg5Y)
 * Alt.Net Melbourne - 29th May 2018 - Overview of Span&lt;T&gt; - [Slides](https://www.slideshare.net/DavidWengier/a-brief-overview-of-spant) - [Video](https://www.youtube.com/watch?v=byvoPD15CXs)
