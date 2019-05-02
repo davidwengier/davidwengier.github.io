@@ -11,9 +11,9 @@ I also delivered the Day 2 Technical Keynote at the AACUHO conference in Hobart 
 As far as meetups and conferences go I have spoken, or will speak, at the following events:
 
 * NDC Oslo 2019 - 17 to 21 June 2019 - [Pragmatic Performance](https://ndcoslo.com/talk/pragmatic-performance-when-to-care-about-perf-and-what-to-do-about-it/) and [Lowering in C#](https://ndcoslo.com/talk/lowering-in-c-whats-really-going-on-in-your-code/)
-* VIC.NET Meetup - 2nd May 2019 - Whats New in visual Studio 2019
-* Alt.Net Melbourne - 30th April 2019 - Short version of Whats New in visual Studio 2019
-* Melbourne Visual Studio 2019 Launch - 3rd April 2019 - Keynote: Whats New in visual Studio 2019
+* VIC.NET Meetup - 2nd May 2019 - Whats New in Visual Studio 2019
+* Alt.Net Melbourne - 30th April 2019 - Short version of Whats New in Visual Studio 2019
+* Melbourne Visual Studio 2019 Launch - 3rd April 2019 - Keynote: Whats New in Visual Studio 2019
 * Alt.Net Melbourne - 26th February 2019 - Contributing to Microsoft via Open Source
 * NDC London 2019 - 28 January to 1 February 2019 - [Pragmatic Performance](https://ndc-london.com/talk/pragmatic-performance-when-to-care-about-perf-and-what-to-do-about-it/) - [Slides](https://www.slideshare.net/DavidWengier/pragmatic-performance-from-ndc-london-2019) - [Video](https://www.youtube.com/watch?v=EBe0k7na1FQ)
 * NDC Sydney 2018 - 19 to 21 September 2018 - [Pragmatic Performance](https://ndcsydney.com/talk/pragmatic-performance-when-to-care-about-perf-and-what-to-do-about-it/) - [Video](https://www.youtube.com/watch?v=rBwsrLFBg5Y)
