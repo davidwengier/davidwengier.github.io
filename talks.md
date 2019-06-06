@@ -10,7 +10,8 @@ I also delivered the Day 2 Technical Keynote at the AACUHO conference in Hobart 
 
 As far as meetups and conferences go I have spoken, or will speak, at the following events:
 
-* NDC Oslo 2019 - 17 to 21 June 2019 - [Pragmatic Performance](https://ndcoslo.com/talk/pragmatic-performance-when-to-care-about-perf-and-what-to-do-about-it/) and [Lowering in C#](https://ndcoslo.com/talk/lowering-in-c-whats-really-going-on-in-your-code/)
+* NDC Oslo 2019 - 17th to 21st June 2019 - [Pragmatic Performance](https://ndcoslo.com/talk/pragmatic-performance-when-to-care-about-perf-and-what-to-do-about-it/) and [Lowering in C#](https://ndcoslo.com/talk/lowering-in-c-whats-really-going-on-in-your-code/)
+* Alt.Net Melbourne - 28th June 2019 - Lowering in C#
 * VIC.NET Meetup - 2nd May 2019 - Whats New in Visual Studio 2019
 * Alt.Net Melbourne - 30th April 2019 - Short version of Whats New in Visual Studio 2019
 * Melbourne Visual Studio 2019 Launch - 3rd April 2019 - Keynote: Whats New in Visual Studio 2019
