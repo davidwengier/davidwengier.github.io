@@ -10,14 +10,26 @@ I also delivered the Day 2 Technical Keynote at the AACUHO conference in Hobart 
 
 As far as meetups and conferences go I have spoken, or will speak, at the following events:
 
-* NDC Oslo 2019 - 17th to 21st June 2019 - [Pragmatic Performance](https://ndcoslo.com/talk/pragmatic-performance-when-to-care-about-perf-and-what-to-do-about-it/) and [Lowering in C#](https://ndcoslo.com/talk/lowering-in-c-whats-really-going-on-in-your-code/)
+2019:
+
+* Adelaide .NET User Group - 8th October 2019 - TBA
+* NDC Oslo 2019 - 17th to 21st June 2019
+  * [Pragmatic Performance](https://ndcoslo.com/talk/pragmatic-performance-when-to-care-about-perf-and-what-to-do-about-it/) - [Slides](https://www.slideshare.net/DavidWengier/pragmatic-performance-from-ndc-oslo-2019) - [Video](https://www.youtube.com/watch?v=24qazsRnc40)
+  * [Lowering in C#](https://ndcoslo.com/talk/lowering-in-c-whats-really-going-on-in-your-code/) - [Slides](https://www.slideshare.net/DavidWengier/lowering-in-c-what-really-happens-with-your-code-from-ndc-oslo-2019) - Video coming soon
 * Alt.Net Melbourne - 28th June 2019 - Lowering in C#
 * VIC.NET Meetup - 2nd May 2019 - Whats New in Visual Studio 2019
 * Alt.Net Melbourne - 30th April 2019 - Short version of Whats New in Visual Studio 2019
 * Melbourne Visual Studio 2019 Launch - 3rd April 2019 - Keynote: Whats New in Visual Studio 2019
 * Alt.Net Melbourne - 26th February 2019 - Contributing to Microsoft via Open Source
-* NDC London 2019 - 28 January to 1 February 2019 - [Pragmatic Performance](https://ndc-london.com/talk/pragmatic-performance-when-to-care-about-perf-and-what-to-do-about-it/) - [Slides](https://www.slideshare.net/DavidWengier/pragmatic-performance-from-ndc-london-2019) - [Video](https://www.youtube.com/watch?v=EBe0k7na1FQ)
-* NDC Sydney 2018 - 19 to 21 September 2018 - [Pragmatic Performance](https://ndcsydney.com/talk/pragmatic-performance-when-to-care-about-perf-and-what-to-do-about-it/) - [Video](https://www.youtube.com/watch?v=rBwsrLFBg5Y)
+* NDC London 2019 - 28th January to 1st February 2019 - [Pragmatic Performance](https://ndc-london.com/talk/pragmatic-performance-when-to-care-about-perf-and-what-to-do-about-it/) - [Slides](https://www.slideshare.net/DavidWengier/pragmatic-performance-from-ndc-london-2019) - [Video](https://www.youtube.com/watch?v=EBe0k7na1FQ)
+
+2018:
+
+* NDC Sydney 2018 - 19th to 21st September 2018 - [Pragmatic Performance](https://ndcsydney.com/talk/pragmatic-performance-when-to-care-about-perf-and-what-to-do-about-it/) - [Video](https://www.youtube.com/watch?v=rBwsrLFBg5Y)
+* Melbourne .NET User Group - 12th September 2018 - Pragmatic Performance
 * Alt.Net Melbourne - 29th May 2018 - Overview of Span&lt;T&gt; - [Slides](https://www.slideshare.net/DavidWengier/a-brief-overview-of-spant) - [Video](https://www.youtube.com/watch?v=byvoPD15CXs)
 * DDD by Night March 2018 - 15th March 2018 - Introduction to Amazon Echo Skills - [Slides](https://www.slideshare.net/DavidWengier/introduction-to-amazon-echo-skills)
+
+2017:
+
 * Alt.Net Melbourne - 29th August 2017 - Benchmarking and Performance - [Slides](https://www.slideshare.net/DavidWengier/performance-and-benchmarking-79247400) - [Code](https://github.com/davidwengier/Benchmark) - [Video](https://www.youtube.com/watch?v=S8zhGaT6vv8)
