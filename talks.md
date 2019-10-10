@@ -12,8 +12,11 @@ As far as meetups and conferences go I have spoken, or will speak, at the follow
 
 2019:
 
-* .NET Down Under Tour - October 2019 - TBA
-* Adelaide .NET User Group - 8th October 2019 - TBA
+* .NET Down Under Tour - October 2019 - Lowering in C#, and .NET Panel
+  * Sydney - 19th October
+  * Melbourne - 21st October
+  * Brisbane - 23rd October
+* Adelaide .NET User Group - 9th October 2019 - Pragmatic Performance
 * NDC Oslo 2019 - 17th to 21st June 2019
   * [Pragmatic Performance](https://ndcoslo.com/talk/pragmatic-performance-when-to-care-about-perf-and-what-to-do-about-it/) - [Slides](https://www.slideshare.net/DavidWengier/pragmatic-performance-from-ndc-oslo-2019) - [Video](https://www.youtube.com/watch?v=24qazsRnc40)
   * [Lowering in C#](https://ndcoslo.com/talk/lowering-in-c-whats-really-going-on-in-your-code/) - [Slides](https://www.slideshare.net/DavidWengier/lowering-in-c-what-really-happens-with-your-code-from-ndc-oslo-2019) - [Video](https://www.youtube.com/watch?v=gc1AxbNybvw)
