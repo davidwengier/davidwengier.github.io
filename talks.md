@@ -10,6 +10,10 @@ I also delivered the Day 2 Technical Keynote at the AACUHO conference in Hobart 
 
 As far as meetups and conferences go I have spoken, or will speak, at the following events:
 
+2020:
+
+* NDC London 2020 - 27th to 31st January 2020 - [Lowering in C#](https://ndc-london.com/talk/lowering-in-c-whats-really-going-on-in-your-code/)
+
 2019:
 
 * .NET Down Under Tour - October 2019 - Lowering in C#, and .NET Panel
