@@ -16,6 +16,7 @@ As far as meetups and conferences go I have spoken, or will speak, at the follow
 
 2019:
 
+* Alt.Net Melbourne - 26th November 2019 - Project File Power Up: Things you should know about project files and MSBuild
 * .NET Down Under Tour - October 2019 - Lowering in C#, and .NET Panel
   * Sydney - 19th October
   * Melbourne - 21st October
