@@ -13,7 +13,7 @@ As far as meetups and conferences go I have spoken, or will speak, at the follow
 2020:
 
 * NDC London 2020 - 27th to 31st January 2020 - [Lowering in C#](https://ndc-london.com/talk/lowering-in-c-whats-really-going-on-in-your-code/)
-* [.NET Oxford](https://www.meetup.com/dotnetoxford/events/267776292/) - 28th January 2020 - A (very) opinionated guide to MSBuild and Project Files, as part of the [UK .NET Tour 2020](https://dotnettour.github.io/UKTour2020/) - [Slides](https://www.slideshare.net/DavidWengier/a-very-opinionated-guide-to-msbuild-and-project-files)
+* [.NET Oxford](https://www.meetup.com/dotnetoxford/events/267776292/) - 28th January 2020 - A (very) opinionated guide to MSBuild and Project Files, as part of the [UK .NET Tour 2020](https://dotnettour.github.io/UKTour2020/) - [Slides](https://www.slideshare.net/DavidWengier/a-very-opinionated-guide-to-msbuild-and-project-files) - [Video](https://www.youtube.com/watch?v=5HEbsyU5E1g)
 
 2019:
 
