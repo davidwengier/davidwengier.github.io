@@ -28,7 +28,8 @@ footer-links:
   rss: rss # just type anything here for a working RSS icon
   twitter: davidwengier
   stackoverflow: users/489
-  youtube: # channel/<your_long_string> or user/<user-name>
+  youtube: c/davidwengier
+  twitch: davidwengier
   googleplus: # anything in your profile username that comes after plus.google.com/
 
 
