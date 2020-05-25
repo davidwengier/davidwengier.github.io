@@ -13,7 +13,7 @@ As far as meetups and conferences go I have spoken, or will speak, at the follow
 2020:
 
 * DDD By Night May 2020 - 21st May 2020 - Panel discussion on Microsoft Build announcements
-* Microsoft Build 2020 - 20th May 2020 - Exploring Visual Studio Codespaces - [Video](https://www.youtube.com/watch?v=4cVZdTN6vqE) (Conversation with host, not a planned/scripted talk)
+* Microsoft Build 2020 - 20th May 2020 - [Exploring Visual Studio Codespaces](https://mybuild.microsoft.com/sessions/2d1c0f59-0c9b-467b-9bff-71bdb0956171) - [Video](https://www.youtube.com/watch?v=4cVZdTN6vqE) (Conversation with host, not a planned/scripted talk)
 * NDC London 2020 - 27th to 31st January 2020 - [Lowering in C#](https://ndc-london.com/talk/lowering-in-c-whats-really-going-on-in-your-code/) - [Video](https://www.youtube.com/watch?v=pxDczZYe6F8)
 * [.NET Oxford](https://www.meetup.com/dotnetoxford/events/267776292/) - 28th January 2020 - A (very) opinionated guide to MSBuild and Project Files, as part of the [UK .NET Tour 2020](https://dotnettour.github.io/UKTour2020/) - [Slides](https://www.slideshare.net/DavidWengier/a-very-opinionated-guide-to-msbuild-and-project-files) - [Video](https://www.youtube.com/watch?v=5HEbsyU5E1g)
 
