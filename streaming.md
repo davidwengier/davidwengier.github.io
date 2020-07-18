@@ -10,6 +10,6 @@ A little while ago I decided to fork the project, remove some of the extra unnec
 
 So what do you do when you abandon two side projects? Start a third! So I'm re-writing Trains completely from scratch in C#, using .NET Core and SkiaSharp, and to keep me honest and actually working on it, I'm live streaming it (most) every Wednesday night at 8:30pm Australian Eastern Time.
 
-You can follow along on Twitch at [https://www.twitch.tv/davidwengier](https://www.twitch.tv/davidwengier) and every stream is uploaded to YouTube afterwards in the [Trains.NET playlist](https://bit.ly/trains-net-videos). If you want to chat about the project you can [Join the Discord](https://discord.gg/Z2WvKkq).
+You can follow along on Twitch at [https://www.twitch.tv/davidwengier](https://www.twitch.tv/davidwengier) and every stream is uploaded to YouTube afterwards in the [Trains.NET playlist](https://bit.ly/trains-net-videos). If you want to chat about the project you can [Join the Discord](https://discord.gg/Yt5B58b).
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLTF9e85S45hIKmP7VgV5eUxcoJUxoTs-N" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
