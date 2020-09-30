@@ -12,6 +12,11 @@ As far as meetups and conferences go I have spoken, or will speak, at the follow
 
 2020:
 
+* dotFest.ru 2020 - 17th October 2020 - Source Generators
+* Adelaide .NET User Group - 14th October 2020 - Source Generators
+* NDC Sydney 2020 - 14th October 2020 - Source Generators
+* Melb.NET Inaugural Meetup - 8th September 2020 - Source Generators
+* Alt.Net Sydney August 2020 - 25th August 2020 - Source Generators - [Video](https://www.youtube.com/watch?v=Xp20J1tDC3A)
 * DDD By Night May 2020 - 21st May 2020 - Panel discussion on Microsoft Build announcements
 * Microsoft Build 2020 - 20th May 2020 - [Exploring Visual Studio Codespaces](https://mybuild.microsoft.com/sessions/2d1c0f59-0c9b-467b-9bff-71bdb0956171) - [Video (YouTube)](https://www.youtube.com/watch?v=4cVZdTN6vqE) - [Video (Channel 9)](https://channel9.msdn.com/Events/Build/2020/BDL119) (Note: Conversation with host, not a planned/scripted talk)
 * NDC London 2020 - 27th to 31st January 2020 - [Lowering in C#](https://ndc-london.com/talk/lowering-in-c-whats-really-going-on-in-your-code/) - [Video](https://www.youtube.com/watch?v=pxDczZYe6F8)
