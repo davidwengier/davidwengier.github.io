@@ -12,7 +12,7 @@ As far as meetups and conferences go I have spoken, or will speak, at the follow
 
 2020:
 
-* .NET Conf 2020 - 12th November 2020 - Source Generators
+* .NET Conf 2020 - 12th November 2020 - Source Generators - [Video](https://www.youtube.com/watch?v=3YwwdoRg2F4)
 * dotFest.ru 2020 - 17th October 2020 - Source Generators
 * Adelaide .NET User Group - 14th October 2020 - Source Generators - [Videp](https://www.youtube.com/watch?v=ATo1Z_R62eU)
 * NDC Sydney 2020 - 14th October 2020 - Source Generators - [Video](https://www.youtube.com/watch?v=pqLs7X6Cr6s)
