@@ -10,10 +10,14 @@ I also delivered the Day 2 Technical Keynote at the AACUHO conference in Hobart 
 
 As far as meetups and conferences go I have spoken, or will speak, at the following events:
 
+2021:
+* NDC Melbourne 2021 - 29th July 2021 - Records - [Video](https://www.youtube.com/watch?v=lxwNcg2q1-Y)
+* Melb.NET - 1st June 2021 - Hot Visual Reload Studio 2022 - [Video](https://www.youtube.com/watch?v=ofvukqqvkbg)
+
 2020:
 
 * .NET Conf 2020 - 12th November 2020 - Source Generators - [Video](https://www.youtube.com/watch?v=3YwwdoRg2F4)
-* dotFest.ru 2020 - 17th October 2020 - Source Generators
+* dotFest.ru 2020 - 17th October 2020 - Source Generators - [Video](https://www.youtube.com/watch?v=MWjz5m05UNI) - [Russian Dub](https://www.youtube.com/watch?v=ynNCA8umfVg)
 * Adelaide .NET User Group - 14th October 2020 - Source Generators - [Videp](https://www.youtube.com/watch?v=ATo1Z_R62eU)
 * NDC Sydney 2020 - 14th October 2020 - Source Generators - [Video](https://www.youtube.com/watch?v=pqLs7X6Cr6s)
 * Melb.NET Inaugural Meetup - 8th September 2020 - Source Generators
