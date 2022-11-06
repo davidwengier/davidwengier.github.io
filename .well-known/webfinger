@@ -1,0 +1,23 @@
+{
+    "subject": "acct:davidwengier@aus.social",
+    "aliases": [
+        "https://aus.social/@davidwengier",
+        "https://aus.social/users/davidwengier"
+    ],
+    "links": [
+        {
+            "rel": "http://webfinger.net/rel/profile-page",
+            "type": "text/html",
+            "href": "https://aus.social/@davidwengier"
+        },
+        {
+            "rel": "self",
+            "type": "application/activity+json",
+            "href": "https://aus.social/users/davidwengier"
+        },
+        {
+            "rel": "http://ostatus.org/schema/1.0/subscribe",
+            "template": "https://aus.social/authorize_interaction?uri={uri}"
+        }
+    ]
+}
